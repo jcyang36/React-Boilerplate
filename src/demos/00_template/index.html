@@ -10,14 +10,28 @@
 </head>
 <body>
 
-    <div id="container"></div>
+    <div id="example"></div>
 
-    <script type="text/babel">
-        ReactDOM.render(
-            <h2>Welcome to React!</h2>,
-            document.getElementById('container')
-        );
-    </script>
+<script type="text/babel">
+
+    var Bacon =React.createClass({
+        render: function (){
+            return (
+               <div><h2>Bacon component</h2>
+                   <p>I am some sample text</p>
+               </div>
+            );
+        }
+
+    });
+    ReactDOM.render(<div>
+        <Bacon />
+        <Bacon />
+        <Bacon />
+
+    </div>, document.getElementById("example"));
+
+</script>
 
 </body>
 </html>
